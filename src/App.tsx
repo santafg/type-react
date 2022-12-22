@@ -42,7 +42,65 @@ import "./App.css";
 
 // let printName: (name: string) => void ;
 // let printName: (name: string) => never ;
-let printName: (name: string) => string ;
+// let printName: (name: string) => string ;
+
+// Type and Interface
+
+// type Person = {
+//   name: string;
+//   age?: number;
+// };
+
+// interface Person {
+//   name: string;
+//   age?: number;
+// }
+
+// type X = {
+//   a: string;
+//   b: string;
+// };
+
+// inheritance or extend
+
+// type Y = X & {
+//   c: string;
+//   d: string;
+// };
+
+// let y: Y = {
+//   a: "",
+//   b: "",
+//   c: "",
+//   d: "",
+// };
+
+interface Person {
+  name: string;
+  age?: number;
+}
+
+interface Guy extends Person {
+  profession: string;
+}
+
+let myGuy: Guy = {
+  name: "Santanu Ghosh",
+  age: 10,
+  profession: "Web dev",
+};
+
+console.log(myGuy);
+
+type X = Person & {
+  a: string;
+  b: string;
+};
+
+interface Y extends Person {
+  c: string;
+  d: string;
+}
 
 function App() {
   return <div>hwllo</div>;
