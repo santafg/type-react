@@ -1,109 +1,16 @@
 import React from "react";
 import "./App.css";
 
-// // Variables
-
-// let name: string;
-// let name: unknown;
-// let age: number;
-// let isStudent: boolean;
-// let hobbies: string[];
-
-// // union
-
-// let age: string | number;
-
-// let role: [number, string];
-
-// type Person = {
-//   name: string;
-//   age?: number;
-// };
-
-// let person: Person = {
-//   name: "Santanu",
-//   age: 10,
-// };
-// let person2: Person = {
-//   name: "Santanu",
-// };
-
-// let lotsOfPersons: Person[];
-
-// // function
-
-// function printName(name: string) {
-//   console.log(name);
-// }
-
-// printName("Santanu");
-
-// let printName : Function ;
-
-// let printName: (name: string) => void ;
-// let printName: (name: string) => never ;
-// let printName: (name: string) => string ;
-
-// Type and Interface
-
-// type Person = {
-//   name: string;
-//   age?: number;
-// };
-
-// interface Person {
-//   name: string;
-//   age?: number;
-// }
-
-// type X = {
-//   a: string;
-//   b: string;
-// };
-
-// inheritance or extend
-
-// type Y = X & {
-//   c: string;
-//   d: string;
-// };
-
-// let y: Y = {
-//   a: "",
-//   b: "",
-//   c: "",
-//   d: "",
-// };
-
-interface Person {
-  name: string;
-  age?: number;
-}
-
-interface Guy extends Person {
-  profession: string;
-}
-
-let myGuy: Guy = {
-  name: "Santanu Ghosh",
-  age: 10,
-  profession: "Web dev",
+const App: React.FC = () => {
+  return (
+    <div className="min-h-screen min-w-full flex flex-col items-center bg-green-400">
+      <h1 className="text-white text-3xl my-4 mx-2 uppercase">Tasks</h1>
+      <div className="bg-white px-4 py-2 rounded-xl ">
+        <input placeholder="Enter Todo" className="border-none outline-none" type="text" />
+        <button className="ml-2">GO</button>
+      </div>
+    </div>
+  );
 };
-
-console.log(myGuy);
-
-type X = Person & {
-  a: string;
-  b: string;
-};
-
-interface Y extends Person {
-  c: string;
-  d: string;
-}
-
-function App() {
-  return <div>hwllo</div>;
-}
 
 export default App;
