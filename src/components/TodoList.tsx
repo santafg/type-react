@@ -9,9 +9,8 @@ interface Props {
 
 const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
   return (
-    <div className="my-4 flex justify-evenly w-11/12 flex-wrap">
+    <div className="my-8 flex flex-col sm:flex-row justify-evenly w-11/12 flex-wrap gap-4">
       {todos.map((todo) => (
-        // <li key={i}>{item.todo}</li>
         <SingleTodo
           todo={todo}
           key={todo.id}
